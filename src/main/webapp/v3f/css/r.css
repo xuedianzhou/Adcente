@@ -1,0 +1,700 @@
+body {
+	background: url(../img/register/register_bg.jpg) no-repeat fixed center
+		top;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+
+@media only screen and (max-width:932px ) {
+	.nav_right {
+		display: block;
+	}
+}
+/*注册表单*/
+.mimaKuang {
+	margin-top: 48px;
+	margin-top: 90px\9\0;
+	*margin-top: 90px
+}
+
+.registerTishi {
+	color: #e6494a;
+	font-weight: bold;
+	text-align: center;
+	font-size: 13px;
+	margin-top: 150px;
+}
+
+.register,.login {
+	position: relative;
+	width: 655px;
+	height: 750px;
+	margin: 0 auto;
+	top: 130px;
+	color: #FFFFFF;
+	font-size: 17px;
+}
+
+.register_tit,.login_tit {
+	position: relative;
+	width: 358px;
+	margin: 0 auto;
+}
+
+.login_tit {
+	width: 280px;
+}
+
+.account_info {
+	position: relative;
+	width: 100%;
+	height: 185px;
+	margin-top: 45px;
+}
+
+.left_text {
+	display: inline-block;
+	float: left;
+	width: 70px;
+	line-height: 42px;
+}
+
+.right_input {
+	float: left;
+	width: 565px;
+}
+
+.input_text {
+	overflow: visible;
+	display: inline-block;
+	background: #FFFFFF;
+	width: 241px;
+	height: 16px;
+	margin: 0 7px;
+	border: 2px solid #FFFFFF;
+	border-radius: 5px;
+	font-size: 15px;
+	line-height: 17px;
+	padding: 12px 10px;
+}
+
+.input_text:focus {
+	border: 2px solid #FF7F18;
+}
+
+.getCode {
+	position: absolute;
+	border: 1px solid #eb7802;
+	right: 200px;
+	top: 0;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 6px 8px;
+	border-radius:5px;
+	cursor: pointer;
+	background: #eb7802;
+}
+
+.getCode:hover {
+	background: #FF7F18;
+}
+
+.qq_info {
+	position: relative;
+	width: 100%;
+}
+
+.right_input .kefuCheck_label,.terms_radio_label {
+	background: url(../img/register/radiobutton1.png) no-repeat left center;
+	padding-left: 25px;
+	cursor: pointer;
+}
+
+.right_input .kefuCheck_label.checked,.terms_radio_label.checked {
+	background: url(../img/register/radiobutton2.png) no-repeat left center;
+}
+
+.kefu_check,.kefuList_check,.terms_service_check {
+	position: absolute;
+	left: 120px;
+	top: 2px;
+	margin: 0;
+	z-index: -1;
+}
+
+.kefu_list {
+	float: left;
+	display: none;
+	width: 505px; /*height: 120px;*/
+	background: url(../img/nav_bg.png);
+	margin: 30px 8px 15px 8px;
+	border-radius: 5px;
+	padding: 20px;
+	font-size: 14px;
+}
+
+.kefu_list a {
+	display: inline-block;
+	color: #000000;
+	margin: 5px 25px 5px 0;
+}
+
+.kefu_list label {
+	width: 100px;
+	display: inline-block;
+	background: url(../img/register/radiobutton1.png) no-repeat left center;
+	background-size: 13px 13px;
+	cursor: pointer;
+	padding-left: 18px;
+}
+
+.kefu_list label.checked {
+	background: url(../img/register/radiobutton2.png) no-repeat left center;
+	background-size: 13px 13px;
+}
+
+.kefu_list label img {
+	vertical-align: middle;
+}
+
+.kefu_list span.kefu-tit {
+	color: #444;
+	display: inline-block;
+	font-weight: bold;
+	margin: 10px 0;
+}
+
+.kefu_list .shuoming {
+	color: #EB7802;
+	margin-top: 10px;
+}
+
+.terms_service {
+	margin-top: 50px;
+}
+
+.terms_service .right_input {
+	width: 550px;
+	margin-left: 6px;
+	position: relative;
+	height: 42px;
+	line-height: 42px;
+	border-radius: 5px;
+	font-size: 15px;
+	background: url(../img/nav_bg.png);
+	color: #000000;
+}
+
+.terms_checkbox {
+	position: absolute;
+	left: 10px;
+}
+
+.terms_rules {
+	position: absolute;
+	right: 10px;
+	color: #2466d4;
+	cursor: pointer;
+}
+
+.terms_service_check {
+	top: -4370px;
+}
+
+.registerSubmit {
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#submit {
+	overflow: visible;
+	border: none;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	padding: 13px 55px;
+	background: #eb7802;
+	border-radius: 5px;
+	font-size: 21px;
+	cursor: pointer;
+}
+
+#submit:hover {
+	background: #FF7F18;
+}
+
+#sendBefore {
+	width: 500px;
+}
+
+.prompt {
+	position: absolute;
+	font-size: 13px;
+	background: none;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.mobile_text {
+	left: 78px;
+	top: 48px;
+	display: none;
+}
+
+.smsCode_text {
+	top: 50px;
+	left: 363px;
+	display: none;
+}
+
+.password_text {
+	top: 141px;
+	left: 78px;
+	display: none;
+}
+
+.passwordre_text {
+	top: 142px;
+	left: 363px;
+	display: none;
+}
+
+.qq_text {
+	left: 78px;
+	top: 48px;
+	display: none;
+}
+/*验证码弹出框*/
+.codeMask,.hotMask,.service_mask {
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: #000000;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#5000000,
+		endColorstr=#5000000);
+	background: rgba(0, 0, 0, 0.5) !important;
+	filter: Alpha(opacity = 50);
+	z-index: 88;
+}
+
+#sendBefore {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	width: 435px;
+	height: 250px;
+	border: 2px solid #ff7f18;
+	top: 50%;
+	left: 50%;
+	padding: 10px;
+	margin-top: -125px;
+	margin-left: -217.5px;
+	background: #FFFFFF;
+	border-radius: 10px;
+}
+
+.closeCode {
+	position: absolute;
+	right: 30px;
+	top: 20px;
+	cursor: pointer;
+}
+
+.closeCode_tit {
+	width: 310px;
+	font-size: 16px;
+	color: #444444;
+	margin: 40px 0 20px 40px;
+	padding-bottom: 10px;
+	border-bottom: 3px solid #cbcbcb;
+}
+
+.closeCode_con {
+	position: relative;
+	width: 310px;
+	margin-left: 40px;
+}
+
+.closeCode_con input {
+	position: absolute;
+	height: 30px;
+	width: 160px;
+	border: 1px solid #ff7f18;
+	border-radius: 5px;
+	font-size: 14px;
+	line-height: 30px;
+}
+
+.closeCode_con input:focus {
+	border: 1px solid #FF7F18;
+}
+
+.closeCode_con img {
+	position: absolute;
+	left: 200px;
+}
+
+.closeCode_text {
+	position: absolute;
+	top: 37px;
+	left: 2px;
+	font-size: 14px;
+	color: #ff7f18;
+}
+
+.changCode {
+	position: absolute;
+	top: 38px;
+	right: 20px;
+	text-decoration: underline;
+}
+
+.closeCode_submit {
+	position: absolute;
+	top: 180px;
+	left: 150px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	padding: 10px 45px;
+	background: #ff7f18;
+	border-radius: 5px;
+	font-size: 18px;
+}
+
+/*热门推荐弹出框*/
+.hotMask {
+	display: none;
+}
+
+#hotCon {
+	display: none;
+	position: fixed;
+	z-index: 9999;
+	width: 904px;
+	height: 578px;
+	background: #FFFFFF;
+	border-radius: 10px;
+	left: 50%;
+	top: 50%;
+	margin-left: -452px;
+	margin-top: -270px;
+}
+
+.tabs a {
+	text-align: center;
+	display: inline-block;
+	color: #9f9f9f;
+	border-bottom: none;
+	line-height: 53px;
+	line-height: 23px\9\0;
+	*line-height: 23px;
+	display: block;
+	font-size: 16px;
+}
+
+.hotAll a {
+	line-height: 53px\9\0;
+} /*ie9*/
+.tabs {
+	display: table;
+	position: absolute;
+	width: 770px;
+	height: 53px;
+	overflow: hidden;
+	top: 60px;
+	left: 60px;
+	border-bottom: 1px solid #bfbfbf;
+}
+
+.tabs li {
+	float: left;
+	margin-left: 5px;
+	width: 135px;
+	height: 53px;
+	line-height: 53px;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	border: 1px solid #bfbfbf;
+	border-bottom: none;
+}
+
+li.hotAll {
+	width: 58px;
+	margin-left: 0;
+	background: #ff7f18;
+	border: 1px solid #ff7f18;
+	border-bottom: none;
+}
+
+li.hotAll img {
+	position: relative;
+	margin-right: 0;
+	TOP: 30%;
+	HEIGHT: auto
+}
+
+.tabs img {
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.tab_content {
+	position: absolute;
+	width: 770px;
+	height: 410px;
+	overflow: hidden;
+	top: 130px;
+	left: 60px;
+}
+
+.tab_content .tabs_item {
+	position: relative;
+	width: 100%;
+	height: 410px;
+	background: #FFFFFF;
+}
+
+.slidebox {
+	width: 770px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 400px;
+}
+
+.slidebox li {
+	float: left;
+	width: 770px;
+	height: 400px;
+	left: 0;
+	top: 0;
+}
+
+.dot {
+	position: absolute;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	bottom: 0;
+	left: 0;
+}
+
+.dot b {
+	width: 12px;
+	height: 12px;
+	border-radius: 20px;
+	color: #333;
+	display: inline-block;
+	background: #7d7d7d;
+	text-align: center;
+	line-height: 12px;
+	margin: 0 3px;
+	margin-top: 6px;
+	cursor: pointer;
+	font-weight: normal;
+}
+
+.dot .cur {
+	background: #F63;
+	color: #fff;
+}
+
+.slidebox_table li {
+	position: relative;
+	float: left;
+	width: 152px;
+	height: 183px;
+	border: 1px solid #eeeeee;
+	text-align: center;
+	cursor: pointer;
+	overflow: hidden;
+	font-size: 13px;
+}
+
+.slidebox_table img {
+	width: 75px;
+	height: 75px;
+	margin: 10px 0;
+}
+
+.slidebox_table .table_tit {
+	color: #7f7f7f;
+	width: 140px;
+	height: 45px;
+	line-height: 16px;
+	margin: 0 auto;
+}
+
+.table_second {
+	color: #9b9b9b;
+	line-height: 25px;
+}
+
+.table_third {
+	color: #ff7f18;
+}
+
+.center_title {
+	color: #ff7f18;
+}
+
+.center_title1 {
+	font-size: 17px;
+}
+
+.center_title2 {
+	font-size: 15px;
+	line-height: 65px;
+}
+/*服务条款*/
+.service_radius {
+	position: fixed;
+	width: 800px;
+	height: 600px;
+	left: 50%;
+	z-index: 99;
+	border-radius: 10px;
+	margin-left: -400px;
+	top: 50%;
+	margin-top: -300px;
+	background: #FFFFFF;
+	display: none;
+	z-index: 9999;
+}
+
+.serviceDetail {
+	position: relative;
+	width: 600px;
+	height: 400px;
+	margin: 50px auto;
+	padding: 50px 50px;
+	overflow-y: scroll;
+	font-size: 12px;
+	line-height: 30px;
+}
+
+.serviceDetail h1 {
+	text-align: center;
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+.serviceDetail h2 {
+	font-size: 15px;
+	line-height: 30px;
+}
+
+.serviceDetail p {
+	text-indent: 2em;
+}
+
+.serviceDetail .closeCode {
+	position: fixed;
+	right: 50%;
+	top: 50%;
+	margin-top: -270px;
+	margin-right: -380px;
+}
+/*登陆*/
+.login {
+	width: 700px;
+	height: 500px;
+	top: 200px;
+}
+
+.login_form {
+	position: relative;
+	margin-top: 45px;
+}
+
+#loginSubmit {
+	display: inline-block;
+	border: none;
+	padding: 5px 22px;
+	*padding: 2px 22px;
+	overflow: visible;
+	line-height: 30px;
+	color: #FFFFFF;
+	font-family: "微软雅黑";
+	background: #eb7802;
+	border-radius: 5px;
+	font-size: 18px;
+	margin-right: 0;
+}
+
+#loginSubmit:hover {
+	background: #FF7F18;
+}
+
+.login_form .input_text {
+	margin: 0 20px 0 0;
+}
+
+.nameApw_text {
+	left: 293px;
+	top: 50px;
+	font-size: 15px;
+	display: none;
+}
+
+.goRegister {
+	color: #cccccc;
+	display: inline-block;
+	margin-top: 7px;
+	font-size: 15px;
+	float: none;
+}
+
+.goRegister:hover {
+	color: #FFFFFF;
+}
+
+.lostPw {
+	position: absolute;
+	right: 145px;
+	font-size: 15px;
+	margin-top: 7px;
+	color: #cccccc;
+}
+
+.lostPw:hover {
+	color: #FFFFFF;
+}
+
+.login_form .prompt {
+	background: #FF7F18;
+}
+
+.yzmShow {
+	position: relative;
+	left: 290px;
+	top: 20px;
+}
+
+.yzmShow img {
+	position: absolute;
+	left: 145px;
+	top: 5px;
+}
+
+.yzmShow a {
+	display: block;
+	position: absolute;
+	left: 220px;
+	top: 55px;
+	font-size: 13px;
+}
+
+.yzmShow a:hover {
+	color: #FF7F18;
+}
+
+.YZM_text {
+	position: absolute;
+	left: 0;
+	top: 50px;
+}

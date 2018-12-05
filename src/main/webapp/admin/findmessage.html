@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/layui-v2.3.0/layui/css/layui.css"
+	type="text/css" media="all">
+<title></title>
+</head>
+<script src="/js/jquery-3.1.1.js"></script>
+<script src="/layui-v2.3.0/layui/layui.js"></script>
+<script>
+	var $ = null;
+	var table = null;
+	var layer = null;
+	var form = null;
+	var tableload = null;
+	var flow = null;
+
+	layui.use([ 'layer', 'table', 'form' ], function() {
+		$ = layui.jquery;
+		table = layui.table;//获取layui的表格对象
+		layer = layui.layer;
+		form = layui.form;
+		flow = layui.flow;
+		tableload = table.render({
+			elem : '#message',
+			url : '/f/message',
+			page : true,
+			cellMinWidth : true, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+
+			cols : [ [ //表头
+			{
+				field : 'uid',
+
+				title : '用户ID',
+				sort : true
+			}, {
+				field : 'type',
+				title : '通知类型'
+
+			}, {
+				field : 'matter',
+				title : '信息详情'
+			}, {
+				field : 'state',
+				title : '通知状态',
+				templet : function(d) {
+					if (d.state == '0')
+						return "未读";
+					else
+						return "已读";
+				}
+			}, {
+				field : 'ptime',
+				title : '通知时间'
+			}, {
+				title : '操作',
+				field : "",
+				toolbar : "#barDemo"
+			} ] ]
+		});
+
+		$("#findname").click(function() {
+			var name = $("#name").val();
+			table.reload('message', {//重载表格数据
+				page : {
+					curr : 1, //重新从第 1 页开始
+				},
+				method : "post",
+				where : {
+					uid : name,
+				}
+			});
+		});
+		//监听工具条
+		table.on('tool(table)', function(obj) {
+			var data = obj.data;
+			if (obj.event === 'check') {
+				putuid(data.uid);
+			}
+		});
+		function putuid(uid) {
+			$.post("/f/getuid", {
+				"uid" : uid
+			}, function(data) {
+					if(data=="ok"){
+					layer.msg("短信发送成功");
+					}else{
+					layer.msg("短信发送失败了");
+					return false;
+					}
+			})
+		}
+	});
+</script>
+<script id="barDemo" type="text/html">
+	<a class="layui-btn layui-btn-radius layui-btn-xs layui-btn-danger" lay-event="check">短信通知</a>
+</script>
+<body>
+	<div class="demoTable">
+		输入姓名进行查询：
+		<div class="layui-inline">
+			<input class="layui-input" id="name" autocomplete="off">
+		</div>
+		<a id="findname" class="layui-btn layui-btn-radius layui-btn-normal">搜索</a>
+		<table id="message" lay-filter="table"></table>
+	</div>
+</body>
+</html>

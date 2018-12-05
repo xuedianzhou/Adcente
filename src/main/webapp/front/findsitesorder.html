@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/layui-v2.3.0/layui/css/layui.css"
+	type="text/css" media="all">
+</head>
+<script src="/js/jquery-3.1.1.js"></script>
+<script src="/layui-v2.3.0/layui/layui.js"></script>
+<script type="text/javascript">
+var laypage=null;
+layui
+			.use(
+					[ 'layer', 'table', 'form','laypage' ],
+					function() {
+						$ = layui.jquery;
+						table = layui.table;//获取layui的表格对象
+						layer = layui.layer;
+							laypage = layui.laypage;
+						tableload = table
+								.render({
+									elem : '#order',
+									url : '/f/findorder',
+									page : true,
+									cellMinWidth:true, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+									cols : [ [ //表头
+											{
+												field : 'oid',
+												
+												title : '订单编号',
+												sort : true
+											},
+											{
+												field : 'dns',
+												
+												title : '网站域名'
+												
+											},
+											{
+												field : 'sitesurl',
+												title : '网站路径'
+											},
+											{
+												field : 'aid',
+												title : '所属广告',
+												
+											},
+											{
+												field : 'ptime',
+												title : '创建时间'
+											},
+											{
+												field : 'hits',
+												title : '当前点击量'
+											},
+											{
+												field : 'state',
+												title : '订单状态',
+												templet : function(d) {
+												if(d.state=='0')	return "正在进行";
+												else return "订单完成";
+											}
+											}
+											] ]
+								});
+								});
+</script>
+<body>
+<table id="order" lay-filter="table"></table>
+</body>
+</html>
